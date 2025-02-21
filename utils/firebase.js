@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey.json');  // Ruta correcta si el archivo está en la raíz
+const serviceAccount = require('../serviceAccountKey.json');  // Ruta correcta si el archivo está en la raíz
 
 
 

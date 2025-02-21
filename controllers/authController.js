@@ -1,4 +1,4 @@
-const { db } = require('../firebase.js');
+const { db } = require('../utils/firebase.js');
 const admin = require('firebase-admin');
 
 exports.signup = async (req, res) => {
@@ -11,6 +11,7 @@ exports.signup = async (req, res) => {
         }
 
         await db.collection('users').doc(id).set({
+            id,
             name,
             email,
             password, // ⚠️ Esto debería estar hasheado por seguridad
